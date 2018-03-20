@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body{
+                background-color:grey;
+                color:#800000;
+            }
+            div{
+                text-align:center;
+            }
+            #act{
+                z-index: -1;
+                position:relative;
+            }
+            #act img{
+                object-fit: contain;
+                width: 75%;
+                height: 400px;
+            }
+            i{
+                position: fixed;
+                top: 50%;
+            }
+            p{
+                padding: 0px 25%;
+            }
+        </style>
+    </head>
+    <body>
+        <i class="fa fa-arrow-circle-left fa-4x" style="float:left; left: 5%" onclick="actChange(-1)"></i>
+        <div id="act">
+            <h1>Act 1</h1>
+            <div id="macbeth">
+                <h2 id="mheading">Macbeth</h2>
+                <p id="mquote">
+                    "For brave Macbeth (well he deserves that name), disdaining fortune, with his brandished steel, which smoked with bloody execution, like valor’s minion, carved out his passage till he faced the slave; Which ne’er shook hands, nor bade farewell to him, till he unseamed him from th’ chops, and fixed his head upon our battlements," (I. ii. 18-25).
+
+                </p>
+                <p id="mbody">
+                    This quote was spoken by a general, who talks about the valiant soldier Macbeth fighting for Scotland in their war, and Macbeth’s defiance to the enemy that he fights against. This quote perfectly helps to display the character that Macbeth has at the beginning of the play. It attributes him as a strong-minded soldier who is courageous and unafraid of any danger that lays before him. This also shows his loyalty to the throne, since Macbeth shows no mercy in his brutal murder of the traitor, Macdonwald.
+
+                </p>
+                <img id="mimage" src="images/macbeth1" alt="Loyal knight">
+                   
+            </div>
+            <div id="lmacbeth">
+                <h2 id="lmheading">Lady Macbeth</h2>
+                <p id="lmquote">
+                    "Glamis thou art, and Cawdor, and shalt be what thou art promised. Yet do I fear thy nature; It is too full o’ th’ milk of human kindnessto catch the nearest wat. Thou wouldst be great, art not without ambition, but without the illness should attend it," (I. v. 15-20).
+                </p>
+                <p id="lmbody">
+                    The Lady Macbeth says this quote after she reads about the situation that Macbeth has been placed in, and how he will become king. However, the Lady Macbeth doubts that Macbeth will be committed to kill Duncan and receive the crown. This shows that the Lady Macbeth is selfish and plots against the other characters and even her own husband in her pursuit of self-pleasure. This characterizes the Lady Macbeth at the beginning of the play as malignant and unafraid to do things in order to pursue her goals.
+                </p>
+                <img id="lmimage" src="images/lmacbeth1" alt="Bloody Crown">
+                    
+            </div>
+        </div>
+        <i class="fa fa-arrow-circle-right fa-4x" style="right:5%" onclick="actChange(1)"></i>
+        <script>
+        var act = 1;
+        var actData = [
+                [
+                    '"For brave Macbeth (well he deserves that name), disdaining fortune, with his brandished steel, which smoked with bloody execution, like valor’s minion, carved out his passage till he faced the slave; Which ne’er shook hands, nor bade farewell to him, till he unseamed him from th’ chops, and fixed his head upon our battlements," (I. ii. 18-25).',
+                    'This quote was spoken by a general, who talks about the valiant soldier Macbeth fighting for Scotland in their war, and Macbeth’s defiance to the enemy that he fights against. This quote perfectly helps to display the character that Macbeth has at the beginning of the play. It attributes him as a strong-minded soldier who is courageous and unafraid of any danger that lays before him. This also shows his loyalty to the throne, since Macbeth shows no mercy in his brutal murder of the traitor, Macdonwald.',
+                    mImageSrc,
+                    '"Glamis thou art, and Cawdor, and shalt be what thou art promised. Yet do I fear thy nature; It is too full o’ th’ milk of human kindnessto catch the nearest wat. Thou wouldst be great, art not without ambition, but without the illness should attend it," (I. v. 15-20).',
+                    'The Lady Macbeth says this quote after she reads about the situation that Macbeth has been placed in, and how he will become king. However, the Lady Macbeth doubts that Macbeth will be committed to kill Duncan and receive the crown. This shows that the Lady Macbeth is selfish and plots against the other characters and even her own husband in her pursuit of self-pleasure. This characterizes the Lady Macbeth at the beginning of the play as malignant and unafraid to do things in order to pursue her goals.',
+                    lMImageSrc,
+                    "#800000"
+                ]
+            ];
+            function actChange(change){
+                    act += change;
+                if(act == 0 || act== 6){
+                    act = 3 - 2 * change;
+                }
+                alert(act);
+            }
+        </script>
+        </body>
+</html>
